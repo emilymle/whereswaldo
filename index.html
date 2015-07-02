@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      img{
+        position: absolute;
+        visibility: hidden;
+      }
+      #waldo-container{
+        height: 100px;
+        width: 100px;
+      }
+      </style>
+    <meta charset="utf-8">
+    <title>Where's Waldo</title>
+  </head>
+  <body>
+    <div id="waldo-container">
+    <img id="waldo-image" src="waldo.jpg" width="100px" alt="Waldo"/>
+  </div>
+    <script>
+  //var waldo = document.querySelector("waldo.img");
+  //console.log(waldo);
+  var waldoContainer = document.getElementById('waldo-container');
+  var waldoImg = document.getElementById('waldo-image');
+  waldoContainer.addEventListener('mouseenter', function(){
+    console.log('moused over waldo');
+    waldoImg.style.visibility = "visible";
+  });
+
+  waldoContainer.addEventListener('mouseleave', function(){
+    console.log('mouse left waldo');
+    waldoImg.style.visibility = "hidden";
+  });
+
+  //  <img onmouseenter="waldo" src="waldo.jpg" alt="Waldo">
+
+  //var setTimeoutID = waldo ()
+    </script>
+  </body>
+  </html>
